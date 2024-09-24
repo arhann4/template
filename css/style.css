@@ -1,3 +1,4 @@
+
 :root {
     --bg-color-light: #ffffff;
     --text-color-light: #000000;
@@ -7,6 +8,7 @@
     --title-color: #ffffff;
     --bg-color-header:rgba(255,255,255,0.5);
     --bg-color-container:#D2E9E9;
+    --bg-color-header-scrolled: #ffffff;
     --text-shadow: 2px 2px 5px rgb(0, 0, 0);
     --box-shadow: 0 8px 16px rgb(0, 0, 0); 
     --border: 3px solid #ddd;
@@ -22,6 +24,7 @@ body.dark-mode {
     --title-color: #ffffff;
     --bg-color-header:rgba(0,0,0,0.5);
     --bg-color-container:#795757;
+    --bg-color-header-scrolled: #795757;
     --text-shadow: 2px 2px 5px rgb(0, 0, 0);
     --box-shadow: 0 8px 16px rgb(255, 255, 255);
     --border: 3px solid #282c34;
