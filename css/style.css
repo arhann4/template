@@ -1,3 +1,4 @@
+/* css main */
 /* Variabel untuk mode terang */
 :root {
     --bg-color-light: #ffffff;
@@ -8,6 +9,7 @@
     --title-color: #ffffff;
     --bg-color-header:rgba(255,255,255,0.5);
     --bg-color-container:#D2E9E9;
+    --bg-color-header-scrolled: #ffffff;
     --text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
@@ -21,6 +23,7 @@ body.dark-mode {
     --title-color: #ffffff;
     --bg-color-header:rgba(0,0,0,0.5);
     --bg-color-container:#795757;
+    --bg-color-header-scrolled: #795757;
     --text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 
