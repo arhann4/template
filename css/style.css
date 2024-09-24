@@ -4,6 +4,7 @@
     --text-color-light: #000000;
     --header-bg-color: #ffffff;
     --nav-link-color: #524d4d;
+    --hr-color-light: #524d4d;
     --nav-link-hover-color: #221f1f;
     --title-color: #ffffff;
     --bg-color-header:rgba(255,255,255,0.5);
@@ -26,6 +27,7 @@ body.dark-mode {
     --bg-color-header:rgba(0,0,0,0.5);
     --bg-color-container:#795757;
     --bg-color-header-scrolled: #795757;
+    --hr-color-light: #795757;
     --text-shadow: 2px 2px 5px rgb(0, 0, 0);
     --box-shadow: 0 8px 16px rgb(0, 0, 0);
     --border: 3px solid #282c34;
@@ -279,7 +281,7 @@ aside{
 }
 
 .aside-title{
-
+    color:var(--text-color-light);
 }
 .aside-content{
     text-decoration: none;
@@ -300,4 +302,60 @@ aside{
     /*size: cover;*/
     width: 60px;
     height: 60px;
+}
+.container-fluid{
+
+    width: 70%;
+    /* padding: 5%; */
+    margin-top: 10px;
+    margin-bottom: 10%;
+    /*border: solid black 10px;*/
+    z-index: 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2%;
+    
+}
+.container-left{
+    
+    margin-left: 10%;
+}
+.container-right{
+    
+    margin-left: 30%;
+}
+.image-content{
+    width: 30%;
+    height: auto;
+    margin-left: 5px;
+}
+
+.text-content{
+    width: 70%;
+
+}
+.vertical-line{
+    border-left: solid var(--hr-color-light) 6px ;
+}
+
+hr .break-page{
+    border-top: 2px double var(--hr-color-light);
+    
+}
+hr{
+    display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  width:50%;
+}
+.animate-image:hover{
+    width: 105%;
+    margin-left:-5%;
+    margin-top:-5%;
+    transition: all 300ms;
+
 }
