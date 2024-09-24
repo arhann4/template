@@ -1,4 +1,3 @@
-/* Variabel untuk mode terang */
 :root {
     --bg-color-light: #ffffff;
     --text-color-light: #000000;
@@ -9,9 +8,11 @@
     --bg-color-header:rgba(255,255,255,0.5);
     --bg-color-container:#D2E9E9;
     --text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    --box-shadow: 0 8px 16px rgb(0, 0, 0); 
+    --border: 3px solid #ddd;
+    --background-color: #f0f0f0;
 }
 
-/* Variabel untuk mode gelap */
 body.dark-mode {
     --bg-color-light: #282c34;
     --text-color-light: #ffffff;
@@ -22,6 +23,9 @@ body.dark-mode {
     --bg-color-header:rgba(0,0,0,0.5);
     --bg-color-container:#795757;
     --text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    --box-shadow: 0 8px 16px rgb(255, 255, 255);
+    --border: 3px solid #282c34;
+    --background-color: #282c34;
 }
 
 /* Gaya Umum */
@@ -56,38 +60,42 @@ html, body {
 .moving-text {
     font-size: 3rem;
     font-weight: bold;
-    opacity: 0; /* Memulai dengan redup */
+    opacity: 0; 
     position: relative;
     animation: slide-in 2s ease-out forwards, fade-in 2s ease-out forwards;
     text-shadow: var(--text-shadow);
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 300px); /* 4 kolom dengan lebar 300px */
-    grid-template-rows: repeat(3, 300px); /* 4 baris dengan tinggi 300px */
-    gap: 70px; /* Jarak antar bingkai */
-    justify-content: center; /* Menyelaraskan grid ke tengah horizontal */
+    grid-template-columns: repeat(3, 300px); 
+    grid-template-rows: repeat(3, 300px);
+    gap: 70px; 
+    justify-content: center; 
     padding: 20px;
 }
 
 .image-frame {
     width: 300px;
     height: 300px;
-    border: 2px solid #ddd; /* Warna border tipis */
-    background-color: #f0f0f0; /* Warna latar belakang bingkai */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), /* Shadow bawah */
-                inset 0 0 10px rgba(255, 255, 255, 0.6); /* Efek cekungan dalam */
-    border-radius: 10px; /* Ujung sudut melengkung */
+    background-color: var(--background-color);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Agar gambar tidak melampaui bingkai */
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    border: var(--border);
+}
+.image-frame {
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    background-color: var(--background-color);
 }
 
 .image-frame img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Mengatur gambar agar sesuai dengan bingkai */
+    object-fit: cover; 
 }
 @keyframes slide-in {
     0% {
@@ -115,15 +123,15 @@ html, body {
 }
 .navbar-default {
   background-color: var(--bg-color-header);
-  transition: background-color 0.5s ease; /* Transisi yang halus */
+  transition: background-color 0.5s ease;
 }
 
-/* Warna navbar setelah di-scroll */
+
 .navbar-scrolled {
-  background-color: var(--bg-color-header-scrolled); /* Ganti dengan warna yang kamu inginkan */
+  background-color: var(--bg-color-header-scrolled); 
 }
 header {
-     /* Gunakan gambar sesuai mode */
+    
     color: #fff;
     text-align: center;
     z-index: 1;
@@ -174,7 +182,7 @@ nav a:hover {
     border-bottom: 1px solid var(--nav-link-color);
 }
 
-/* Tombol dengan ikon */
+
 #toggle-dark-mode {
     background: none;
     border: none;
