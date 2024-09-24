@@ -73,8 +73,8 @@ html, body {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 300px); 
-    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(auto-fill, minmax(30px, 300px)); 
+    grid-template-rows: repeat(auto-fill,minmax(30px, 300px));
     gap: 70px; 
     justify-content: center; 
     padding: 20px;
@@ -305,25 +305,59 @@ aside{
 }
 .container-fluid{
 
-    width: 70%;
+    /* width: 70%; */
     /* padding: 5%; */
+    margin: 0 auto;
+    padding: 0 2px;
     margin-top: 10px;
     margin-bottom: 10%;
-    /*border: solid black 10px;*/
+    /* border: solid black 10px; */
     z-index: 0;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 2%;
+    
+    max-width: 1000px;
+    
+    grid-gap: 2px;
+    justify-content: center;
     
 }
-.container-left{
-    
-    margin-left: 10%;
-}
-.container-right{
-    
-    margin-left: 30%;
-}
+@media screen and (min-width: 768px) {
+    .container-fluid {
+        grid-template-columns: auto auto auto ;
+    }
+    .animate-image:hover{
+        width: 310px;
+        margin-left:-5px;
+        margin-top:-5px;
+        transition: all 300ms;
+    }
+    .container-left{
+        justify-content: start;
+        margin-left: 8%;
+    }
+    .container-right{
+        justify-content: end;
+        margin-left: 20%;
+    }
+  }
+
+  /* Kondisi 2: Perangkat Genggam (iPad, Smartphone, dll) */
+  @media screen and (max-width: 767px) {
+    .container-fluid {
+        grid-template-columns: repeat(1 , minmax(30px, 1000px)) ;
+    }
+    .container-left{
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .container-right{
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+  }
+
 .image-content{
     width: 30%;
     height: auto;
@@ -331,19 +365,22 @@ aside{
 }
 
 .text-content{
-    width: 70%;
+    max-width: 600px;
+    display: flex;
     text-align: justify;
     text-justify: inter-word;
 }
 .vertical-line{
     border-left: solid var(--hr-color-light) 6px ;
+    width: 0px;
+
 }
 
 hr .break-page{
     border-top: 2px double var(--hr-color-light);
     
 }
-hr{
+hr .horizontal-line{
     display: block;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -352,11 +389,4 @@ hr{
   border-style: inset;
   border-width: 1px;
   width:50%;
-}
-.animate-image:hover{
-    width: 105%;
-    margin-left:-5%;
-    margin-top:-5%;
-    transition: all 300ms;
-
 }
