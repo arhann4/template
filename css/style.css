@@ -1,0 +1,265 @@
+/* Variabel untuk mode terang */
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #000000;
+    --header-bg-color: #ffffff;
+    --nav-link-color: #524d4d;
+    --nav-link-hover-color: #221f1f;
+    --title-color: #ffffff;
+    --bg-color-header:rgba(255,255,255,0.5);
+    --bg-color-container:#D2E9E9;
+    --text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/* Variabel untuk mode gelap */
+body.dark-mode {
+    --bg-color-light: #282c34;
+    --text-color-light: #ffffff;
+    --header-bg-color: #110707;
+    --nav-link-color: #bbbbbb;
+    --nav-link-hover-color: #ffffff;
+    --title-color: #ffffff;
+    --bg-color-header:rgba(0,0,0,0.5);
+    --bg-color-container:#795757;
+    --text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+/* Gaya Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+html, body {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.Text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--title-color);
+    position: absolute;
+
+}
+
+.moving-text {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0; /* Memulai dengan redup */
+    position: relative;
+    animation: slide-in 2s ease-out forwards, fade-in 2s ease-out forwards;
+    text-shadow: var(--text-shadow);
+}
+
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+.title {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    color: var(--title-color);
+}
+.navbar-default {
+  background-color: var(--bg-color-header);
+  transition: background-color 0.5s ease; /* Transisi yang halus */
+}
+
+/* Warna navbar setelah di-scroll */
+.navbar-scrolled {
+  background-color: var(--bg-color-header-scrolled); /* Ganti dengan warna yang kamu inginkan */
+}
+header {
+     /* Gunakan gambar sesuai mode */
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    padding: 2px 0;
+    position: fixed;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+nav {
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+nav a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 1px 0;
+    font-weight: 600;
+    font-size: larger;
+    transition: all 300ms;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+nav a:hover {
+    color: var(--nav-link-hover-color);
+    border-bottom: 1px solid var(--nav-link-color);
+}
+
+/* Tombol dengan ikon */
+#toggle-dark-mode {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+    color: var(--text-color-light);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: color 0.3s;
+}
+
+#toggle-dark-mode i {
+    display: none;
+}
+
+
+#toggle-dark-mode .fa-sun {
+    display: block;
+}
+
+
+body.dark-mode #toggle-dark-mode .fa-sun {
+    display: none;
+}
+
+body.dark-mode #toggle-dark-mode .fa-moon {
+    display: block;
+}
+.carousel{
+    z-index: -1;
+    height: 600px;
+    position: relative;
+    top: -70px;
+    background-image: url('../img/web.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.dark-mode > .carousel{
+     background-image: url('../img/jpn.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+html{
+    padding: 0;
+    margin:0;
+}
+.container{
+    width: 85%;
+    padding: 5%;
+    margin: 15px;
+    /*border: solid black 10px;*/
+    z-index: 0;
+    display: grid;
+}
+.rows{
+    display: inline-grid;
+    margin:20px;
+}
+
+content{
+    width: 55%;
+    padding: 30px 20px 30px 20px;
+    margin: 10px;
+    position: absolute;
+    background-color: var(--bg-color-container);
+    color: var(--text-color-light);
+    border-radius: 5px;
+}
+
+aside{
+    position: relative;
+    margin-left: 75%;
+    margin-top: 10px;
+    width: 25%;
+    color:var(--text-color-light);
+    /*margin: 10px;*/
+    padding: 30px 20px 30px 20px;
+    background-color: var(--bg-color-container);
+    /*color: #000;*/
+    border-radius: 5px;
+}
+.title{
+    text-align: center;
+    align-content: center;
+    float: center;
+    color:var(--text-color-light);
+}
+
+.aside-title{
+
+}
+.aside-content{
+    text-decoration: none;
+    color:var(--text-color-light);
+}
+.aside-content:hover{
+    text-decoration: underline;
+    color: #1230AE;
+}
+.aside-img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+
+}
+.aside-img>img{
+    /*size: cover;*/
+    width: 60px;
+    height: 60px;
+}
