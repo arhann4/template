@@ -20,9 +20,4 @@ document.addEventListener('DOMContentLoaded', function () {
         body.classList.toggle('dark-mode');
         updateIcons(); // Perbarui ikon saat mode diganti
     });
-
-
-    hamburgerButton.addEventListener('click', function () {
-    navMenu.classList.toggle('show'); // Toggle menu visibility
-    });
 });

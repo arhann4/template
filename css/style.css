@@ -102,6 +102,11 @@ html, body {
     width: 100%;
     height: 100%;
     object-fit: cover; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-frame img:hover {
+    transform: scale(1.1); /* Memperbesar gambar 10% */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Menambah bayangan saat hover */
 }
 @keyframes slide-in {
     0% {
@@ -219,20 +224,23 @@ body.dark-mode #toggle-dark-mode .fa-sun {
 body.dark-mode #toggle-dark-mode .fa-moon {
     display: block;
 }
-.carousel{
+.carousel {
     z-index: -1;
     height: 600px;
     position: relative;
     top: -70px;
-    background-image: url('../img/web.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-
+    background-image: url('../img/pesawat.png'), url('../img/awan.jpg'); /* Pesawat di atas */
+    background-size: contain, cover; /* Ukuran gambar pesawat dan web */
+    background-position: center 100px, center; /* Geser pesawat ke bawah 20px */
+    background-repeat: no-repeat, no-repeat; /* Hindari pengulangan gambar */
 }
+
 .dark-mode > .carousel{
-     background-image: url('../img/jpn.jpg');
+    background-image: url('../img/f.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: top;
+    
 }
 html{
     padding: 0;
