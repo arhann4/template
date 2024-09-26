@@ -3,35 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/singup.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>login form</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Log In</title>
 </head>
 <body>
-    <div class="wrapper">
-        <h1>Singup</h1>
-        <form>
-            <div>
+    <div class="container" id="container">
+        <div class="sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="icon">
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <span>or use email for registration</span>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Password">
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="sign-in">
+            <form>
+                <h1>Create Account</h1>
+                <div class="icon">
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <span>or use email for password</span>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Password">
+                <a href="#">Forgot Password</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="toogle-container">
+            <div class="toogle">
+                <div class="toogle-panel toogle-left">
+                    <h1>Welcome User</h1>
+                    <p>If you already have an account</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toogle-panel toogle-right">
+                    <h1>Hello, User</h1>
+                    <p>If you don't have an account</p>
+                    <button class="hidden" id="register">Sign In</button>
+                </div>
             </div>
-            <div>
-                <i class="fa-solid fa-user"></i>
-                <input type="firstname" name="firstname" id="firstname-input" placeholder="Username">
-            </div>
-            <div>
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" name="email" id="email-input" placeholder="Email">
-            </div>
-            <div>
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" name="password" id="password-input" placeholder="password">
-            </div>
-            <div>
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" name="-repeat-password" id="repeat-password-input" placeholder="Repeat password">
-            </div>
-            <button type="submit">Sign Up</button>
-        </form>
-       
+        </div>
     </div>
     
 </body>
