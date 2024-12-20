@@ -31,7 +31,7 @@ body.dark-mode {
     --title-color: #ffffff;
     --bg-color-header:rgba(0,0,0,0.5);
     --bg-color-container:#795757;
-    --bg-color-header-scrolled: #795757;
+    --bg-color-header-scrolled: #000000;
     --hr-color-light: #795757;
     --text-shadow: 2px 2px 5px rgb(0, 0, 0);
     --box-shadow: 0 8px 16px rgb(0, 0, 0);
